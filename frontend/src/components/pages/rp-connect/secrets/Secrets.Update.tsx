@@ -118,7 +118,12 @@ class RpConnectSecretUpdate extends PageComponent<{ secretId: string }> {
           </FormField>
 
           <ButtonGroup>
-            <Button isLoading={this.isUpdating} isDisabled={isSecretEmpty} onClick={action(() => this.updateSecret())}>
+            <Button
+              isLoading={this.isUpdating}
+              data-testid="submit-update-secret"
+              isDisabled={isSecretEmpty}
+              onClick={action(() => this.updateSecret())}
+            >
               Update secret
             </Button>
             <Button variant="link" disabled={this.isUpdating} onClick={action(() => this.cancel())}>

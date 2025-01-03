@@ -180,6 +180,7 @@ class RpConnectSecretsList extends PageComponent {
                     <Flex justifyContent={'flex-end'}>
                       <ButtonGroup>
                         <Button
+                          data-testid={`edit-secret-${r.id}`}
                           variant="icon"
                           height="16px"
                           color="gray.500"
@@ -193,7 +194,7 @@ class RpConnectSecretsList extends PageComponent {
                         </Button>
                         <ConfirmItemDeleteModal
                           trigger={
-                            <Button variant="icon" height="16px" color="gray.500">
+                            <Button variant="icon" height="16px" color="gray.500" data-testid={`delete-secret-${r.id}`}>
                               <TrashIcon />
                             </Button>
                           }
